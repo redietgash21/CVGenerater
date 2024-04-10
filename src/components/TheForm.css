@@ -26,10 +26,11 @@
     .img{
         border-style: outset;
         border-radius: 50%;
-        width: 10%;
+        width: 120px;
+
         height: 20vh;
-        
-        /* margin-left: 20%; */
+        border: #3A5AAC solid 2px;
+      
     }
     .img img{
       width: 100%;
@@ -75,7 +76,16 @@
         pointer-events: auto;
     }
     .flex{
-        margin-left: 5%;
+       
         display: flex;
+        
+        justify-content: center;
+        
+    }
+    .gapEight{
         gap: 8em;
     }
+    .gapName{
+        flex-direction: column;
+        margin-right: 500px;  
+     }

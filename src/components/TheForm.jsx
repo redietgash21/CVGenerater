@@ -5,15 +5,14 @@
 
 
 
-import React from "react";
 
-import { useState,  useRef } from "react";
+import "./TheForm.css"
+import  React, { useState,  useRef } from "react";
 import html2canvas from "html2canvas"
 import jsPDF from "jspdf"
 import Style1 from "./Style1"
 
 import {Link} from "react-router-dom"
-import "./TheForm.css"
 function TheForm () {
    const pdfRef = useRef();
    const inputRef = useRef(null);
@@ -34,6 +33,7 @@ function TheForm () {
 
 
    const downloadPDF=()=>{
+    console.log("===========download PDF==============");
     const input = pdfRef.current;
    
 
@@ -61,138 +61,133 @@ function TheForm () {
     return (
       <>
        <div className="form">
-          <div className="formHeader">
-            
-              <Link to="/"><button className="formBtn">Back to home </button></Link>
-             
-          </div>
-          <hr />
-          <div className="formMain" >
-          
-          <div className="flex">
-             
-              
-                <div className="">
-                    <div className="img" onClick={handleImageClick}>
-                    <img src={image} alt="Me"/> 
-                    <input
-                      type="file"
-                      accept="image/jpg, image/jpeg, image/png"
-                      ref={inputRef}
-                      onChange={handleImageChange}
-                      style={{display:"none"}}
-                      />
-                     </div>
-                     <p>First Name</p>
-                      <input type="text" 
-                          onChange={(event)=>{
-                          setFirstName(event.target.value)
-                         }}/>
-                    </div>
-                    <div className="">
-                      <p>Middle Name</p>
-                      <input type="text" 
-                              onChange={(event)=>{
-                                setMiddleName(event.target.value)
-                              }}/>
-                    </div>
-                    <div className="">
-                      <p>Last Name</p>
-                      <input type="text" 
-                            onChange={(event)=>{
-                              setLastName(event.target.value)
-                            }}
-                      />
-                    </div>
-             
-                </div>
-            <div className="flex">
-              <div className="">
-                  <div className="">
-                      <p>Age</p>
-                      <input type="text" 
-                      onChange={(event)=>{
-                        setAge(event.target.value)
-                      }}/>
-                  </div>
-                  <div className="">
-                    <p>Gmail</p>
-                    <input type="text" 
-                          onChange={(event)=>{
-                            setGmail(event.target.value)
-                          }}
-                    />
-                  </div>
-                  <div className="">
-                    <p>Address</p>
-                    <input type="text" 
-                          onChange={(event)=>{
-                            setAdress(event.target.value)
-                          }}
-                    />
-                  </div>
-                  <div className="">
-                    <p>Phone Number</p>
-                    <input type="text" 
-                          onChange={(event)=>{
-                            setPhoneNumber(event.target.value)
-                          }}
-                    />
-                  </div>
-              </div>
-              <div className="">
-                <p>About</p>
-                <textarea name="" id="" cols="30" rows="10"
-                          onChange={(event)=>{
-                            setAbout(event.target.value)
-                          }}
-                 ></textarea>
-                <p>Experiance</p>
-                <textarea name="" id="" cols="30" rows="10"
-                          onChange={(event)=>{
-                            setExperiance(event.target.value)
-                          }}
-                ></textarea>
-              </div>
-              <div className="">
-                <p>Education</p>
-                <textarea name="" id="" cols="30" rows="10"
-                          onChange={(event)=>{
-                            setEducation(event.target.value)
-                          }}
-                ></textarea>
-                <p>Experiance</p>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                
-              </div>
+            <div className="formHeader">
+                <Link to="/"><button className="formBtn">Back to home </button></Link>
             </div>
-          </div>
-          <p>File name</p>
-         <input type="text"  onChange={(event)=>{
-                            setFileName(event.target.value)
+            <hr />
+            <div className="flex gapEight" >
+                <div className="flex">               
+                      <div className="img gapName" onClick={handleImageClick}>
+                        <img src={image} alt="Me"/> 
+                        <input
+                          type="file"
+                          accept="image/jpg, image/jpeg, image/png"
+                          ref={inputRef}
+                          onChange={handleImageChange}
+                          style={{display:"none"}}
+                        />
+                      </div>
+                      <div className="gapName">
+                        <p>First Name</p>
+                        <input type="text" 
+                                onChange={(event)=>{
+                                setFirstName(event.target.value)
+                              }}/>
+                      </div>
+                      <div className="gapName">
+                        <p>Middle Name</p>
+                        <input type="text" 
+                                onChange={(event)=>{
+                                  setMiddleName(event.target.value)
+                                }}/>
+                      </div>
+                      <div className="gapName">
+                        <p>Last Name</p>
+                        <input type="text" 
+                              onChange={(event)=>{
+                                setLastName(event.target.value)
+                              }}
+                        />
+                      </div>  
+                </div>
+                <div className="">
+                      <div className="">
+                          <p>Age</p>
+                          <input type="text" 
+                          onChange={(event)=>{
+                            setAge(event.target.value)
                           }}/>
-          <div className="divSty1" ref={pdfRef}>
-           {hiddenSty && <Style1 firstName={firstName}
-               lastName={lastName}
-               middleName={middleName}
-               age={age}
-               education={education}
-               phoneNumber={phoneNumber}
-               experiance={experiance}
-               about={about}
-               gmail={gmail}
-               address={address}   
-               image={image}
-                  /> }  
+                        </div>
+                        <div className="">
+                          <p>Gmail</p>
+                          <input type="text" 
+                                onChange={(event)=>{
+                                  setGmail(event.target.value)
+                                }}
+                          />
+                          </div>
+                          <div className="">
+                            <p>Address</p>
+                            <input type="text" 
+                                  onChange={(event)=>{
+                                    setAdress(event.target.value)
+                                  }}
+                            />
+                            </div>
+                            <div className="">
+                              <p>Phone Number</p>
+                              <input type="text" 
+                                    onChange={(event)=>{
+                                      setPhoneNumber(event.target.value)
+                                    }}
+                              />
+                            </div>
+                  </div>
+                
+                 
+                  <div className="">
+                    <p>About</p>
+                    <textarea name="" id="" cols="30" rows="10"
+                              onChange={(event)=>{
+                                setAbout(event.target.value)
+                              }}
+                    ></textarea>
+                    <p>Experiance</p>
+                    <textarea name="" id="" cols="30" rows="10"
+                              onChange={(event)=>{
+                                setExperiance(event.target.value)
+                              }}
+                    ></textarea>
+                  </div>
+                  <div className="">
+                    <p>Education</p>
+                    <textarea name="" id="" cols="30" rows="10"
+                              onChange={(event)=>{
+                                setEducation(event.target.value)
+                              }}
+                    ></textarea>
+                    <p>Experiance</p>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    
+                  </div>
+                
+            </div>
+            <p>File name</p>
+            <input type="text"  onChange={(event)=>{
+                                setFileName(event.target.value)
+                              }}/>
+              <div className="divSty1" ref={pdfRef}>
+              {hiddenSty && <Style1 firstName={firstName}
+                  lastName={lastName}
+                  middleName={middleName}
+                  age={age}
+                  education={education}
+                  phoneNumber={phoneNumber}
+                  experiance={experiance}
+                  about={about}
+                  gmail={gmail}
+                  address={address}   
+                  image={image}
+                      /> }  
+              </div>
+              <button className="downloadBtn" onClick={()=>{setHiddenSty(true);downloadPDF()}}>
+              Download PDF
+              </button>
+              {console.log("---------------------",hiddenSty)}
           </div>
-          <button className="downloadBtn" onClick={()=>{setHiddenSty(true);downloadPDF()}}>
-           Download PDF
-          </button>
-          {console.log("---------------------",hiddenSty)}
-       </div>
-       <div className="sty">
-       
-        </div>
+          <div className="sty">
+          
+            </div>
       </>
     )
   }   
