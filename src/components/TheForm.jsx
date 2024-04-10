@@ -70,74 +70,75 @@ function TheForm () {
           <div className="formMain" >
           
           <div className="flex">
-              <div className="img" onClick={handleImageClick}>
-                <img src={image} alt="Me"/> 
-                <input
-                  type="file"
-                  accept="image/jpg, image/jpeg, image/png"
-                  ref={inputRef}
-                  onChange={handleImageChange}
-                  style={{display:"none"}}
-                />
-              </div>
+             
               
                 <div className="">
-                  <p>First Name</p>
-                  <input type="text" 
+                    <div className="img" onClick={handleImageClick}>
+                    <img src={image} alt="Me"/> 
+                    <input
+                      type="file"
+                      accept="image/jpg, image/jpeg, image/png"
+                      ref={inputRef}
+                      onChange={handleImageChange}
+                      style={{display:"none"}}
+                      />
+                     </div>
+                     <p>First Name</p>
+                      <input type="text" 
                           onChange={(event)=>{
                           setFirstName(event.target.value)
                          }}/>
-                </div>
-                <div className="">
-                  <p>Middle Name</p>
-                  <input type="text" 
-                          onChange={(event)=>{
-                            setMiddleName(event.target.value)
-                          }}/>
-                </div>
-                <div className="">
-                  <p>Last Name</p>
-                  <input type="text" 
-                         onChange={(event)=>{
-                          setLastName(event.target.value)
-                        }}
-                   />
-                </div>
+                    </div>
+                    <div className="">
+                      <p>Middle Name</p>
+                      <input type="text" 
+                              onChange={(event)=>{
+                                setMiddleName(event.target.value)
+                              }}/>
+                    </div>
+                    <div className="">
+                      <p>Last Name</p>
+                      <input type="text" 
+                            onChange={(event)=>{
+                              setLastName(event.target.value)
+                            }}
+                      />
+                    </div>
              
-            </div>
-            <div className="grid">
+                </div>
+            <div className="flex">
               <div className="">
-                <div className="">
-                    <p>Age</p>
+                  <div className="">
+                      <p>Age</p>
+                      <input type="text" 
+                      onChange={(event)=>{
+                        setAge(event.target.value)
+                      }}/>
+                  </div>
+                  <div className="">
+                    <p>Gmail</p>
                     <input type="text" 
-                    onChange={(event)=>{
-                      setAge(event.target.value)
-                    }}/>
-                </div>
-                <div className="">
-                  <p>Gmail</p>
-                  <input type="text" 
-                         onChange={(event)=>{
-                          setGmail(event.target.value)
-                        }}
-                  />
-                </div>
-                <div className="">
-                  <p>Address</p>
-                  <input type="text" 
-                         onChange={(event)=>{
-                          setAdress(event.target.value)
-                        }}
-                  />
-                </div>
-                <div className="">
-                  <p>Phone Number</p>
-                  <input type="text" 
-                         onChange={(event)=>{
-                          setPhoneNumber(event.target.value)
-                        }}
-                  />
-                </div>
+                          onChange={(event)=>{
+                            setGmail(event.target.value)
+                          }}
+                    />
+                  </div>
+                  <div className="">
+                    <p>Address</p>
+                    <input type="text" 
+                          onChange={(event)=>{
+                            setAdress(event.target.value)
+                          }}
+                    />
+                  </div>
+                  <div className="">
+                    <p>Phone Number</p>
+                    <input type="text" 
+                          onChange={(event)=>{
+                            setPhoneNumber(event.target.value)
+                          }}
+                    />
+                  </div>
               </div>
               <div className="">
                 <p>About</p>
@@ -153,7 +154,7 @@ function TheForm () {
                           }}
                 ></textarea>
               </div>
-              <div className="colRight">
+              <div className="">
                 <p>Education</p>
                 <textarea name="" id="" cols="30" rows="10"
                           onChange={(event)=>{
