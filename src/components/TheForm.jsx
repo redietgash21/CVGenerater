@@ -5,14 +5,15 @@
 
 
 
+import React from "react";
 
-import "./TheForm.css"
-import  React, { useState,  useRef } from "react";
+import { useState,  useRef } from "react";
 import html2canvas from "html2canvas"
 import jsPDF from "jspdf"
 import Style1 from "./Style1"
 
 import {Link} from "react-router-dom"
+import "./TheForm.css"
 function TheForm () {
    const pdfRef = useRef();
    const inputRef = useRef(null);
@@ -33,7 +34,6 @@ function TheForm () {
 
 
    const downloadPDF=()=>{
-    console.log("===========download PDF==============");
     const input = pdfRef.current;
    
 
@@ -69,7 +69,7 @@ function TheForm () {
           <hr />
           <div className="formMain" >
           
-            <div className="firstLine">
+          <div className="flex">
               <div className="img" onClick={handleImageClick}>
                 <img src={image} alt="Me"/> 
                 <input
@@ -80,7 +80,7 @@ function TheForm () {
                   style={{display:"none"}}
                 />
               </div>
-              <div className="row">
+              
                 <div className="">
                   <p>First Name</p>
                   <input type="text" 
@@ -103,16 +103,16 @@ function TheForm () {
                         }}
                    />
                 </div>
-              </div>
+             
             </div>
-            <div className="secondLine">
-              <div className="colLeft">
+            <div className="grid">
               <div className="">
-                  <p>Age</p>
-                  <input type="text" 
-                  onChange={(event)=>{
-                    setAge(event.target.value)
-                  }}/>
+                <div className="">
+                    <p>Age</p>
+                    <input type="text" 
+                    onChange={(event)=>{
+                      setAge(event.target.value)
+                    }}/>
                 </div>
                 <div className="">
                   <p>Gmail</p>
@@ -139,7 +139,7 @@ function TheForm () {
                   />
                 </div>
               </div>
-              <div className="colCenter">
+              <div className="">
                 <p>About</p>
                 <textarea name="" id="" cols="30" rows="10"
                           onChange={(event)=>{
