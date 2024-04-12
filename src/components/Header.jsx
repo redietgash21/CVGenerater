@@ -11,20 +11,24 @@ function Header() {
  
     return (
         <>
-        <div className="header">
-            <div className="left">
-                <span>Home</span>
-                {/* <span>Design</span>         */}
-            </div>
+        <header>
+            <nav>
+            <ul>
+                <li><a>Home</a></li>
+                {/* <li></li> */}
+            </ul>
+            </nav>
             <div className="right">
-                
-                    <Link to="./login"><button className="headerBtn">LOGIN</button></Link>
-                
-                
-                   <Link to="signup"><button className="headerBtn">SIGNUP</button></Link> 
-                            
+            <ul >
+                <li><Link to="./login">LOGIN</Link></li>
+                <li><Link to="signup">SIGNUP</Link></li>
+            </ul>
             </div>
-        </div>
+           
+           
+            
+        </header>
+        
       </>
     )
   
