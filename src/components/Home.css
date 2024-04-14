@@ -3,14 +3,19 @@
 
 main{
     background-color: #E7FBFF;
-    min-height: 80vh;  
+    max-height: 80vh;  
     justify-content: center;
     text-align: center;
+    position: relative;
     top: 50%;
 }
 h1{
-    font-size: 20vw;
-    
+    font-size: 17vw;    
+}
+.start{
+    background-color: blue;
+    margin-left: 50%;
+    font-size: 3vw;
 }
 
 
