@@ -9,13 +9,9 @@ function Home() {
     return (
      <> 
         <main>
-        <div className="home">
-           <div className="div1">DESIGN</div>
-            <div className="div2">YOUR CV</div>
-           
-                <Link to="/design"> <button className="start">Get Started </button></Link>
-           
-        </div>
+            <h1>DESIGN</h1>
+            <h1>YOUR CV</h1>
+            <Link to="/design"> <button className="start">Get Started </button></Link>
         </main>
      </>
 

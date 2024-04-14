@@ -3,7 +3,13 @@
 
 main{
     background-color: #E7FBFF;
-    display: flex;
+    min-height: 80vh;  
+    justify-content: center;
+    text-align: center;
+    top: 50%;
+}
+h1{
+    font-size: 20vw;
     
 }
 
