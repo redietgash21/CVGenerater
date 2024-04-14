@@ -5,19 +5,26 @@
 header{
     background-color: #E7FBFF;
     display: flex;
+    justify-content:space-around
 }
 
 ul{
     display: flex;
     list-style: none;
     
+    
 }
-.right{
-    float:right;
+
+.btn{
+ padding-inline: 20%;
+ margin-inline: 20px;
+ gap: 1%;
+ color: black;
+ background-color: blue;
+ text-decoration: wavy;
+
 }
-.right{
-    border: red 2px solid;
-}
+
 
 
 

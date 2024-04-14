@@ -18,15 +18,11 @@ function Header() {
                 {/* <li></li> */}
             </ul>
             </nav>
-            <div className="right">
             <ul >
-                <li><Link to="./login">LOGIN</Link></li>
-                <li><Link to="signup">SIGNUP</Link></li>
+            <Link to="./login"><button className="btn">LOGIN</button></Link>
+            <Link to="signup">  <button className="btn">SIGNUP</button></Link>
             </ul>
-            </div>
-           
-           
-            
+   
         </header>
         
       </>
