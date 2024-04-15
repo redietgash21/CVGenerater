@@ -18,8 +18,9 @@
 }
 
 .signupAll .signupMain i{
-    font-size: 40px;
-    margin-left: -60%;
+    background-color: #E7FBFF;
+    width: 50vw;
+    height: 80vh;   
     }
 .signupAll .signupMain{
     background-color: #E7FBFF;
@@ -29,7 +30,7 @@
      height: 80vh;
     
 }
-.signupAll .signupMain h3{
+/* .signupAll .signupMain h3{
     font-size: 60px;
 }
 
@@ -43,4 +44,4 @@
     margin-left: 66%;
     background-color: #3A5AAC;
     font-size: large;
-}
+} */
