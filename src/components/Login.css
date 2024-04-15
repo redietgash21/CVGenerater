@@ -8,20 +8,14 @@
     /* background-color: red; */
     
 }
-.loginAll .loginMain i{
-font-size: 40px;
-margin-left: -60%;
-}
+
 
 .loginAll .loginMain{
     background-color: #E7FBFF;
-   margin-left: 25vw;
-   
-    width: 70%;
-    height: 80vh;
-    
+    width: 50vw;
+    height: 80vh;   
 }
-.loginAll .loginMain h3{
+/* .loginAll .loginMain h3{
     font-size: 60px;
 }
 
@@ -34,4 +28,4 @@ margin-left: -60%;
     margin-left: 40%;
     background-color: #3A5AAC;
     font-size: large;
-}
+} */
