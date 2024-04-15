@@ -26,14 +26,18 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         justify-content: center;
-        grid-column: 2px;
+       margin-block: 10px;
+       text-align: center;
+       align-items: center;
+       align-content: center;
+       
     }
     
     .img{
         border-style: outset;
         border-radius: 50%;
         width: 120px;
-
+        margin-left: 25%;
         height: 20vh;
         border: #3A5AAC solid 2px;
       
