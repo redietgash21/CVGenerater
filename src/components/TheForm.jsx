@@ -60,14 +60,14 @@ function TheForm () {
 
     return (
       <>
-       <div className="form">
+       <div className="">
             <div className="formHeader">
                 <Link to="/"><button className="formBtn">Back to home </button></Link>
             </div>
             <hr />
-            <div className="flex gapEight" >
-                <div className="flex">               
-                      <div className="img gapName" onClick={handleImageClick}>
+            <div className="flex" >
+                         
+                      <div className="img " onClick={handleImageClick}>
                         <img src={image} alt="Me"/> 
                         <input
                           type="file"
@@ -77,21 +77,21 @@ function TheForm () {
                           style={{display:"none"}}
                         />
                       </div>
-                      <div className="gapName">
+                      <div className="">
                         <p>First Name</p>
                         <input type="text" 
                                 onChange={(event)=>{
                                 setFirstName(event.target.value)
                               }}/>
                       </div>
-                      <div className="gapName">
+                      <div className="">
                         <p>Middle Name</p>
                         <input type="text" 
                                 onChange={(event)=>{
                                   setMiddleName(event.target.value)
                                 }}/>
                       </div>
-                      <div className="gapName">
+                      <div className="">
                         <p>Last Name</p>
                         <input type="text" 
                               onChange={(event)=>{
@@ -99,8 +99,7 @@ function TheForm () {
                               }}
                         />
                       </div>  
-                </div>
-                <div className="">
+             
                       <div className="">
                           <p>Age</p>
                           <input type="text" 
@@ -132,7 +131,7 @@ function TheForm () {
                                     }}
                               />
                             </div>
-                  </div>
+             
                 
                  
                   <div className="">
@@ -142,6 +141,8 @@ function TheForm () {
                                 setAbout(event.target.value)
                               }}
                     ></textarea>
+                     </div> 
+                     <div className="">
                     <p>Experiance</p>
                     <textarea name="" id="" cols="30" rows="10"
                               onChange={(event)=>{
@@ -156,17 +157,14 @@ function TheForm () {
                                 setEducation(event.target.value)
                               }}
                     ></textarea>
-                    <p>Experiance</p>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                    
+                   
                   </div>
-                
-            </div>
+                  <div className="">
             <p>File name</p>
             <input type="text"  onChange={(event)=>{
                                 setFileName(event.target.value)
                               }}/>
-              <div className="divSty1" ref={pdfRef}>
+                   <div className="divSty1" ref={pdfRef}>
               {hiddenSty && <Style1 firstName={firstName}
                   lastName={lastName}
                   middleName={middleName}
@@ -180,9 +178,15 @@ function TheForm () {
                   image={image}
                       /> }  
               </div>
-              <button className="downloadBtn" onClick={()=>{setHiddenSty(true);downloadPDF()}}>
+                             <button className="downloadBtn" onClick={()=>{setHiddenSty(true);downloadPDF()}}>
               Download PDF
               </button>
+                               </div> 
+                
+            </div>
+            
+           
+           
               {console.log("---------------------",hiddenSty)}
           </div>
           <div className="sty">

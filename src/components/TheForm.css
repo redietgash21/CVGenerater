@@ -1,4 +1,4 @@
-
+/* 
 
 .form {
     position: absolute;
@@ -21,6 +21,12 @@
         float: left;
         margin-left: 5%;
         margin-bottom: 1%;
+    } */
+    .flex{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-content: center;
+        grid-column: 2px;
     }
     
     .img{
@@ -38,7 +44,7 @@
       border-radius: 50%;
     }
     
-    .secondLine{
+    /* .secondLine{
         display: inline-flex;
         gap: 15%;
     
@@ -88,4 +94,4 @@
     .gapName{
         flex-direction: column;
         margin-right: 500px;  
-     }
+     } */
